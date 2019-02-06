@@ -19,6 +19,10 @@ namespace Web.Controllers
         {
             return View();
         }
+        public IActionResult Snap()
+        {
+            return View();
+        }
         public IActionResult GoodSnap()
         {
             return Content("This is a very good snap .");
