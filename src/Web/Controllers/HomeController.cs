@@ -19,11 +19,21 @@ namespace Web.Controllers
         {
             return View();
         }
+        public IActionResult GoodSnap()
+        {
+            return Content("This is a very good snap .");
+        }
+        
+        public IActionResult BadSnap()
+        {
+            return Content("This is a snap is not that good we can try a better one.");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
