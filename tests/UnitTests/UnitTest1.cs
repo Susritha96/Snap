@@ -25,5 +25,25 @@ namespace UnitTests
         {
             Assert.Equal(exp, Area(n));
         }
+        public void CircumferenceOfCircle()
+        {
+            var expected = 12.56;
+            var b = 2;
+            var actual = Area1(b);
+            Assert.Equal(expected, actual);
+        }
+        double Area1(int s)
+        {
+            return 3.14*2*s;  
+        }
+        [Theory]
+        [InlineData(12.56, 2)]
+        [InlineData(37.68, 6 )]
+        [InlineData(0.0, 0)]
+        public void AreaOfCricle2(double exp, int n)
+        {
+            Assert.Equal(exp, Area1(n));
+        }
+
     }
 }
